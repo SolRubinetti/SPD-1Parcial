@@ -3,7 +3,8 @@
 ![Parcial 1° SPD - Rubinetti Maria Sol ](https://github.com/SolRubinetti/SPD-1Parcial/assets/123521694/46c9fae8-ef3f-4fe3-aaee-c1c83de820c7)
 
 ## Diagrama esquematico
-https://drive.google.com/file/d/1oS8I1a20ltnkRN_G_qihuwwSfDfYlu3N/view?usp=share_link
+
+Aspose.Words.70873467-e8b3-40ee-8d0b-4f355b04d932.001.png
 ## Alumna
 - Rubinetti Maria Sol
 
