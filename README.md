@@ -1,5 +1,9 @@
 # SPD-1Parcial
+## Imagen del proyecto
 ![Parcial 1° SPD - Rubinetti Maria Sol ](https://github.com/SolRubinetti/SPD-1Parcial/assets/123521694/46c9fae8-ef3f-4fe3-aaee-c1c83de820c7)
+
+## Diagrama esquematico
+![Parcial 1° SPD - Rubinetti Maria Sol ](https://github.com/SolRubinetti/SPD-1Parcial/assets/123521694/5d026397-3219-4a20-a1c2-c0e06f477633)
 
 ## Alumna
 - Rubinetti Maria Sol
