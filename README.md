@@ -1,4 +1,5 @@
 # SPD-1Parcial
+![Parcial 1° SPD - Rubinetti Maria Sol ](https://github.com/SolRubinetti/SPD-1Parcial/assets/123521694/46c9fae8-ef3f-4fe3-aaee-c1c83de820c7)
 
 ## Alumna
 - Rubinetti Maria Sol
