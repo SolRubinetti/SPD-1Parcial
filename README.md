@@ -18,5 +18,9 @@ presionando los botones correspondientes.
 ## Funcion principal
 La funcion principal se encarga de subir, bajar o frenar niveles en base al boton que presione el usuario
 
+## Diagrama esquemático
+![image](https://github.com/SolRubinetti/SPD-1Parcial/assets/123521694/2f757633-ec20-4331-8f10-90286e257ede)
+
+
 ## Link al proyecto
 - [Tinkercard-Sol Rubinetti][(https://www.tinkercad.com/things/j6jtBhN2RIB-parcial-1-spd-rubinetti-maria-sol-/editel?sharecode=VJRVLUPUBYbCXBWKbibcZGOPOiHXRNId3063z9i5KYo)
