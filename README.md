@@ -27,7 +27,13 @@ La funcion principal se encarga de subir, bajar o frenar niveles en base al boto
 - D2 GREEN: Hace referencia a la led verde.
 - R2: Es la resistencia de 220 Ohms conectada a la led verde.
 - S1: Pulsador que logra subir consecutivamente el montacargas.
-- S2: 
+- S2: Pulsador que logra bajar consecutivamente al montacargas.
+- S3: Pulsador que logra frenar al montacargas.
+- R3: Resistencia de 1K Ohms referente al pulsador de subida.
+- R4: Resistencia de 1K Ohms referente al pulsador de bajada
+- R5: Resistencia de 1K Ohms referente al pulsador para frenar.
+- DIGIT 1: Hace refencia al Display 7 Segmentos.
+- R6, R7, R8, R9, R10, R11, R12: Son las resistencias de 220 Ohms conectadas a cada una de las "Leds" del Display 7 Segmentos.
 
 ## Link al proyecto
 - [Tinkercard-Sol Rubinetti][(https://www.tinkercad.com/things/j6jtBhN2RIB-parcial-1-spd-rubinetti-maria-sol-/editel?sharecode=VJRVLUPUBYbCXBWKbibcZGOPOiHXRNId3063z9i5KYo)
