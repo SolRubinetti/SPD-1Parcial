@@ -20,6 +20,7 @@ La funcion principal se encarga de subir, bajar o frenar niveles en base al boto
 
 ## Diagrama esquemático
 ![image](https://github.com/SolRubinetti/SPD-1Parcial/assets/123521694/2f757633-ec20-4331-8f10-90286e257ede)
+ ### Explicación del diagrama:
 
 
 ## Link al proyecto
