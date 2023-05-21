@@ -16,7 +16,7 @@ Implementa un algoritmo que permita que el elevador suba y baje o frene
 presionando los botones correspondientes.
 
 ## Funcion principal
-La funcion principal se encarga de subir, bajar o frenar niveles en base al boton que presione el usuario
+La funcion principal se encarga de subir, bajar niveles o frenar en determinado nivel en base al boton que presione el usuario
 
 ## Diagrama esquemático
 ![image](https://github.com/SolRubinetti/SPD-1Parcial/assets/123521694/2f757633-ec20-4331-8f10-90286e257ede)
