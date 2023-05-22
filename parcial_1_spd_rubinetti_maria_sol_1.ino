@@ -1,3 +1,4 @@
+
 // Rubinetti Maria Sol 1D
 
 #define LED_ROJA A0
@@ -12,11 +13,17 @@
 #define PULSADOR_SUBIR 1
 #define PULSADOR_BAJAR 2
 #define PULSADOR_PARAR 3
+#define SENSOR_LUZ_AMBIENTAL A2
+#define SENSOR_INCLINACION 4
+#define Trig A3
+#define Eccho A4
 // Se declaran las variables 
 int pisoActual = 0;
 bool flagSubida = true;
 bool flagBajada = false;
 bool flagFrenar = false;
+int tiempo;
+int distancia;
 
 void setup()
 { // Se declaran los pines de salida y entrada
@@ -32,6 +39,10 @@ void setup()
   pinMode(PULSADOR_SUBIR, INPUT);
   pinMode(PULSADOR_BAJAR, INPUT);
   pinMode(PULSADOR_PARAR, INPUT);
+  pinMode(SENSOR_LUZ_AMBIENTAL, INPUT);
+  pinMode(SENSOR_INCLINACION,INPUT);
+  pinMode(Trig, OUTPUT);
+  pinMode(Eccho,INPUT);
   
 }
 
@@ -237,6 +248,12 @@ void ejecutarAlSubirCero(){
 }
 void loop()
 {
+  int valorLuz = analogRead(SENSOR_LUZ_AMBIENTAL);
+  int estado = digitalRead(SENSOR_INCLINACION);
+  tiempo = digitalRead(Eccho);
+  distancia = (tiempo * 0.034) / 2;
+  if (valorLuz < 40 || estado == HIGH) {
+    //Con el sensor de luz, en caso de ser de día, el montacargas no funcionará
   switch(pisoActual)
 	  //En base al piso actual y al boton presionado, se ejecutarán distintas funciones.
   {
@@ -450,7 +467,7 @@ void loop()
 	if (flagSubida == true || digitalRead(PULSADOR_SUBIR) == HIGH)
 	{
 		//Comienza a subir
-          	lucesPorMovimiento();
+          lucesPorMovimiento();
 		apagarSegmentos();
 		mostrarCuatro();
 			
@@ -465,16 +482,16 @@ void loop()
   	if (flagBajada == true || digitalRead(PULSADOR_BAJAR) == HIGH)
 	{
 		//Comienza a bajar
-          	lucesPorMovimiento();
+          lucesPorMovimiento();
 		apagarSegmentos();
 		mostrarCuatro();
 			
 		if (flagFrenar == false){
 			//Si no quiere frenar, que reste un piso para seguir bajando
 			modificarBajadaPisos();
-          		bajarPisos();
-            		pararDeSubir();
-                	delay(3000);
+          	bajarPisos();
+            pararDeSubir();
+               delay(3000);
 		}		
 	}
 	
@@ -688,6 +705,9 @@ void loop()
 	}
     	break;
    case 9:
+    if (distancia > 100){
+      //Si el sonido detectado se encuentra lejos, 
+      //que ejecute todo perfecto, sino que baje automaticamente
     	if (flagFrenar == true || digitalRead(PULSADOR_PARAR) == HIGH && flagSubida)
 	{
 		//Se frena en el 9 (Si estaba subiendo se le resta un nivel para que frene en el 9)
@@ -715,10 +735,12 @@ void loop()
 		apagarSegmentos();
 		mostrarNueve();
 		if (flagFrenar == false){
+          
             		frenarMontacargas();
               		lucesPorParar();
-			pararDeSubir();
+					pararDeSubir();
                 	delay(3000);
+          
 		}
 	}
 	if (flagBajada == true || digitalRead(PULSADOR_BAJAR) == HIGH)
@@ -736,5 +758,19 @@ void loop()
 		}		
 	}
     	break;
+    } else {
+      mostrarOcho();
+      delay(1000);
+      flagBajada = true;
+      flagSubida = false;
+      modificarBajadaPisos();
+      bajarPisos();
+      break;
+    }
+  	}
+  } else {
+    apagarSegmentos();
+    digitalWrite(LED_ROJA,LOW);
+    digitalWrite(LED_VERDE,LOW);
   }
 }
