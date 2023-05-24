@@ -1,4 +1,4 @@
-# SPD-1Parcial
+# SPD-1Parcial 
 ## Imagen del proyecto
 ![Parcial 1° SPD - Rubinetti Maria Sol ](https://github.com/SolRubinetti/SPD-1Parcial/assets/123521694/63b80db3-bad8-4c20-bc54-3fa424530164)
 
